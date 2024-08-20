@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Health Parameters Analysis</title>
+
+</head>
+<body>
+    <div class="header">
+        <a href="/home" class="button">Go Home</a>
+        <h1>Health Parameters Analysis for Stroke Patients</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Health Parameter</th>
+            <th>Mean</th>
+            <th>Standard Deviation</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{Health Parameter}}</td>
+            <td>{{Mean}}</td>
+            <td>{{Standard Deviation}}</td>
+        </tr>
+        {{/data}}
+    </table>
+<div class="report-section">
+    <h2>Health Parameters Analysis for Stroke Patients</h2>
+
+    <p>This analysis presents key observations on the mean and standard deviation for various health parameters among
+        stroke patients:</p>
+
+    <ul>
+        <li><strong>Systolic Blood Pressure:</strong> Mean - 135.05 mm Hg, Std Dev - 26.37.</li>
+        <li><strong>Diastolic Blood Pressure:</strong> Mean - 84.90 mm Hg, Std Dev - 14.68.</li>
+        <li><strong>HDL Cholesterol Level:</strong> Mean - 55.06 mg/dL, Std Dev - 14.84.</li>
+        <li><strong>LDL Cholesterol Level:</strong> Mean - 125.05 mg/dL, Std Dev - 37.59.</li>
+        <li><strong>Average Glucose Level:</strong> Mean - 130.08 mg/dL, Std Dev - 40.69.</li>
+    </ul>
+
+    <p>It's important to note that these statistical measures do not imply a correlation or causation between the health
+        parameters and stroke incidence. Correlation analysis requires more complex statistical methods, and causation
+        can only be established through controlled experimental designs or longitudinal studies. Further research with
+        appropriate statistical methods is needed to explore potential correlations.</p>
+</div>
+
+
+
+
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .report-section {
+        margin: 20px auto;
+        width: 80%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .report-section h3 {
+        color: #4CAF50;
+
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+
+</html>

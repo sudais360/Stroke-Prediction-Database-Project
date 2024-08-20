@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dietary Habits Analysis</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <a href="/home" class="button">Go Home</a>
+        <h1>Dietary Habits and Stroke Analysis</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Dietary Habit</th>
+            <th>Total Patients</th>
+            <th>Stroke Patients</th>
+            <th>Percentage of Stroke Patients</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{Dietary Habit}}</td>
+            <td>{{TotalPatients}}</td>
+            <td>{{StrokePatients}}</td>
+            <td>{{PercentageOfStrokePatients}}%</td>
+        </tr>
+        {{/data}}
+    </table>
+<div class="report-section">
+    <h2>Dietary Habits and Stroke Correlation Analysis</h2>
+
+    <p>Our analysis of dietary habits among patients and their correlation with stroke incidents reveals the following:
+    </p>
+
+    <ul>
+        <li><strong>Gluten-Free:</strong> 49.6% of gluten-free patients (1026 out of 2068) had a history of stroke.</li>
+        <li><strong>Vegetarian:</strong> 48.9% of vegetarians (1062 out of 2170) experienced a stroke.</li>
+        <li><strong>Non-Vegetarian:</strong> 49.6% of non-vegetarian patients (1063 out of 2144) had strokes.</li>
+        <li><strong>Vegan:</strong> 49.9% of vegans (1090 out of 2185) had a history of stroke.</li>
+        <li><strong>Keto:</strong> 50.8% of keto diet followers (1083 out of 2135) experienced a stroke.</li>
+        <li><strong>Paleo:</strong> 51.0% of paleo diet patients (1118 out of 2192) had strokes.</li>
+        <li><strong>Pescatarian:</strong> 48.7% of pescatarians (1026 out of 2106) had a history of stroke.</li>
+    </ul>
+
+    <p>The analysis indicates that there is no significant variance in stroke prevalence among different dietary groups,
+        with stroke rates ranging from approximately 48.7% to 51.0%. It is crucial to understand that this analysis does
+        not imply causation. Further research is necessary to explore any potential causal relationships between
+        specific dietary habits and the risk of stroke.</p>
+</div>
+
+
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .report-section {
+        margin: 20px auto;
+        width: 80%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .report-section h3 {
+        color: #4CAF50;
+
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+</html>

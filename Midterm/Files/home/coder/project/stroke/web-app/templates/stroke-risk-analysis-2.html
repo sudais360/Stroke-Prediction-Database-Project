@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stroke Analysis</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <a href="/home" class="button">Go Home</a>
+        <h1>Stroke Analysis: Family History Impact</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Group</th>
+            <th>Patients Count</th>
+            <th>Percentage</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{Group}}</td>
+            <td>{{PatientsCount}}</td>
+            <td>{{Percentage}}%</td>
+        </tr>
+        {{/data}}
+    </table>
+
+<div class="report-section">
+    <h2>Detailed Analysis Report: Stroke Incidence and Family History</h2>
+
+    <h3>Overview</h3>
+    <p>This report delves into the stroke incidence among 15,000 patients, categorizing them based on their own stroke
+        diagnosis and their family history of stroke.</p>
+
+    <h3>Key Findings</h3>
+    <ul>
+        <li><strong>Total Patient Cohort:</strong> The analysis encompasses a diverse cohort of 15,000 patients.</li>
+        <li><strong>Categorization:</strong> Patients were classified into four distinct groups based on stroke
+            incidence and family history.</li>
+        <li><strong>Distribution Analysis:</strong> A nearly equal distribution across all groups suggests that family
+            history is significant, but not the sole determinant of stroke occurrence.</li>
+    </ul>
+
+    <h3>In-depth Insights</h3>
+    <p>Both genetic predisposition and non-genetic factors play a role in stroke risk. This necessitates a more nuanced
+        approach to stroke risk assessment.</p>
+
+    <h3>Recommendations</h3>
+    <p>Enhance patient education about stroke risk factors and advocate for integrated health approaches that consider a
+        wide range of risk factors.</p>
+
+    <h3>Conclusion</h3>
+    <p>The analysis reveals a complex interplay between familial history and individual health outcomes concerning
+        stroke, challenging the notion that family history is the predominant risk factor.</p>
+</div>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .report-section {
+        margin: 20px auto;
+        width: 80%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .report-section h3 {
+        color: #4CAF50;
+
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+</style>
+</html>

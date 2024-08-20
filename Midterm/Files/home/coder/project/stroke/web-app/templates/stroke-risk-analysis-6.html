@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Demographic Stroke Analysis</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/home" class="button">Go Home</a>
+        <h1>Demographic Stroke Prevalence Analysis</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Age Group</th>
+            <th>Gender</th>
+            <th>Marital Status</th>
+            <th>Total Patients</th>
+            <th>Stroke Patients</th>
+            <th>Stroke Prevalence (%)</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{AgeGroup}}</td>
+            <td>{{Gender}}</td>
+            <td>{{MaritalStatus}}</td>
+            <td>{{TotalPatients}}</td>
+            <td>{{StrokePatients}}</td>
+            <td>{{StrokePrevalence}}</td>
+        </tr>
+        {{/data}}
+    </table>
+    <div class="report-section">
+        <h2>Demographic Analysis of Stroke Prevalence</h2>
+    
+        <p>This analysis explores stroke prevalence across various demographics, focusing on age group, gender, and marital
+            status:</p>
+    
+        <h3>Age Group and Stroke Prevalence</h3>
+        <ul>
+            <li><strong>18-34 Years:</strong> High stroke prevalence, indicating a need for investigation into underlying
+                causes.</li>
+            <li><strong>35-49 Years:</strong> Slight increase in prevalence, aligning with the increased stroke risk with
+                age.</li>
+            <li><strong>50-64 Years:</strong> Prevalence often exceeding 50%, consistent with general stroke risk
+                understanding.</li>
+            <li><strong>65+ Years:</strong> Varied but generally around 50%, suggesting effective management in this age
+                group.</li>
+        </ul>
+    
+        <h3>Gender Differences</h3>
+        <p>Similar stroke prevalence in males and females, with minor variations suggesting gender-specific risk factors.
+        </p>
+    
+        <h3>Marital Status</h3>
+        <p>Variation in stroke prevalence possibly indicating the influence of social and psychological factors related to
+            marital status.</p>
+    
+        <h3>Overall Observations</h3>
+        <p>Stroke is a significant concern across all age groups, including younger populations. The data underscores the
+            importance of targeted health interventions and awareness tailored to specific demographic groups.</p>
+    </div>
+
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .report-section {
+        margin: 20px auto;
+        width: 80%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .report-section h3 {
+        color: #4CAF50;
+
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+</style>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Condition Prevalence Analysis</title>
+
+</head>
+<body>
+    <div class="header">
+        <a href="/home" class="button">Go Home</a>
+        <h1>Health Condition Prevalence Analysis by Gender</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Condition</th>
+            <th>Gender</th>
+            <th>Count</th>
+            <th>Total Patients</th>
+            <th>Prevalence (%)</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{Condition}}</td>
+            <td>{{Gender}}</td>
+            <td>{{Count}}</td>
+            <td>{{Total_Patients}}</td>
+            <td>{{Prevalence}}</td>
+        </tr>
+        {{/data}}
+    </table>
+    <div class="report-section">
+        <h2>Health Condition Prevalence Analysis</h2>
+    
+        <p>This analysis examines the prevalence of various health conditions in the population, providing insights into the
+            burden of these conditions:</p>
+    
+        <ul>
+            <li>
+                <strong>Hypertension:</strong>
+                <ul>
+                    <li>Prevalence (Male): 25.1771%</li>
+                    <li>Prevalence (Female): 24.6137%</li>
+                    <li>Explanation: Indicates the proportion of individuals diagnosed with high blood pressure, slightly
+                        higher in males.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Heart Disease:</strong>
+                <ul>
+                    <li>Prevalence (Male): 50.5510%</li>
+                    <li>Prevalence (Female): 50.0271%</li>
+                    <li>Explanation: Shows the proportion of individuals with heart disease, signifying a significant burden
+                        in the population.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Family History of Stroke:</strong>
+                <ul>
+                    <li>Prevalence (Male): 50.5773%</li>
+                    <li>Prevalence (Female): 50.6506%</li>
+                    <li>Explanation: Indicates a substantial number of individuals with stroke in their family histories.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Stroke History:</strong>
+                <ul>
+                    <li>Prevalence (Male): 50.1968%</li>
+                    <li>Prevalence (Female): 49.8509%</li>
+                    <li>Explanation: Represents the percentage of individuals who have previously been diagnosed with a
+                        stroke.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Stroke Diagnosis:</strong>
+                <ul>
+                    <li>Prevalence (Male): 50.1574%</li>
+                    <li>Prevalence (Female): 50.2711%</li>
+                    <li>Explanation: Prevalence of individuals who have received a formal diagnosis of stroke, high in both
+                        genders.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <p>Overall, these prevalence values are critical for understanding the distribution and burden of health conditions
+            in the population. They are instrumental in healthcare planning and public health interventions.</p>
+    </div>
+
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .report-section {
+        margin: 20px auto;
+        width: 80%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .report-section h3 {
+        color: #4CAF50;
+
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+</html>

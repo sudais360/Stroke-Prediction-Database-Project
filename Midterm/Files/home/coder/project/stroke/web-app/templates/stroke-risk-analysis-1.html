@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stroke Risk Analysis</title>
+
+</head>
+
+<body>
+    <h1>Stroke Risk Analysis</h1>
+
+    <h2>Healthy Group (Non-smoker, Never Drink, High Exercise)</h2>
+    <table>
+        <tr>
+            <th>Gender</th>
+            <th>Patients Count</th>
+            <th>Percentage of Total</th>
+        </tr>
+        {{#healthy}}
+        <tr>
+            <td>{{Gender}}</td>
+            <td>{{PatientsCount}}</td>
+            <td>{{PercentageOfTotal}}%</td>
+        </tr>
+        {{/healthy}}
+    </table>
+
+    <h2>Unhealthy Group (Currently Smokes, Frequent Drinker, Low Exercise)</h2>
+    <table>
+        <tr>
+            <th>Gender</th>
+            <th>Patients Count</th>
+            <th>Percentage of Total</th>
+        </tr>
+        {{#unhealthy}}
+        <tr>
+            <td>{{Gender}}</td>
+            <td>{{PatientsCount}}</td>
+            <td>{{PercentageOfTotal}}%</td>
+        </tr>
+        {{/unhealthy}}
+    </table>
+    <div class="report-section">
+        <h2>Analysis Report: Stroke Rates in Different Patient Groups</h2>
+
+        <h3>Overview</h3>
+        <p>This report presents an analysis of stroke rates in two distinct patient groups, categorized by their
+            lifestyle choices.</p>
+
+        <h3>Group Comparisons</h3>
+        <ul>
+            <li><strong>Group 1 (UnHealthy)</strong>: Currently Smokes, Frequent Drinker, Low Exercise
+                <ul>
+                    <li>Patients: 195</li>
+                    <li>Stroke Rate: 1.30%</li>
+                </ul>
+            </li>
+            <li><strong>Group 2 (Healthy)</strong>: Non-smoker, Never Drink, High Exercise
+                <ul>
+                    <li>Patients: 203</li>
+                    <li>Stroke Rate: 1.35%</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Findings</h3>
+        <p>Group 2 (Healthy) exhibits a marginally higher stroke rate than Group 1 (UnHealthy), by 0.05 percentage
+            points.</p>
+
+        <h3>Insights</h3>
+        <p>The impact of lifestyle on health is complex, involving factors beyond traditional lifestyle markers. A
+            holistic health perspective is crucial.</p>
+
+        <h3>Recommendations</h3>
+        <p>Expand health education, encourage regular health check-ups, and promote comprehensive community health
+            programs.</p>
+
+        <h3>Conclusion</h3>
+        <p>The slightly higher stroke rate in Group 2 suggests a need to reevaluate our understanding of 'healthy'
+            lifestyle choices.</p>
+    </div>
+        <div class="button-container" style="text-align: center;">
+            <a href="/home" class="button">Go Home</a>
+        </div>
+</body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    
+        h1,
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+    
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    
+        .report-section {
+            margin: 20px auto;
+            width: 80%;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .report-section h3 {
+            color: #4CAF50;
+    
+        }
+    
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+    
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</html>
